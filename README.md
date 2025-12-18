@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="banner.png" alt="Google Tag Manager MCP Server" width="600">
+  <img src="banner.png" alt="Google Tag Manager MCP Server" width="830">
 </div>
 
 # Google Tag Manager MCP Server
