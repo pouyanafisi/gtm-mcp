@@ -1,0 +1,16 @@
+# Auto detect text files and perform LF normalization
+* text=auto
+
+# Explicitly declare files that will always have LF line endings
+*.ts text eol=lf
+*.js text eol=lf
+*.json text eol=lf
+*.md text eol=lf
+
+# Deny GitHub from counting these files in language statistics
+package-lock.json linguist-vendored
+*.lock linguist-vendored
+
+# Mark TypeScript as the primary language
+*.ts linguist-language=TypeScript
+
