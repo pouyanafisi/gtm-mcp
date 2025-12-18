@@ -7,8 +7,8 @@
 ![Node.js](https://img.shields.io/badge/node-%3E%3D18.0.0-brightgreen?style=flat-square&logo=node.js)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.5-blue?style=flat-square&logo=typescript)
 ![License](https://img.shields.io/badge/license-MIT-green?style=flat-square)
-![GitHub stars](https://img.shields.io/github/stars/pouyanafisi/mcp-for-gtm?style=flat-square&logo=github)
-![GitHub forks](https://img.shields.io/github/forks/pouyanafisi/mcp-for-gtm?style=flat-square&logo=github)
+![GitHub stars](https://img.shields.io/github/stars/pouyanafisi/gtm-mcp?style=flat-square&logo=github)
+![GitHub forks](https://img.shields.io/github/forks/pouyanafisi/gtm-mcp?style=flat-square&logo=github)
 
 MCP server for Google Tag Manager API v2. Provides programmatic access to GTM accounts, containers, workspaces, tags, triggers, variables, and version management.
 
@@ -60,16 +60,27 @@ Run `npm run auth` to authenticate. Token saved to `token.json` and auto-refresh
 
 ## Operations
 
-29 operations available. See [OPERATIONS.md](./OPERATIONS.md) for complete reference.
+99 operations available (95 API operations + 4 workflow helpers). See [OPERATIONS.md](./OPERATIONS.md) for complete reference.
 
 ### Categories
 
-- **Create**: Tags, triggers, variables
-- **Read**: Accounts, containers, workspaces, tags, triggers, variables (list/get)
-- **Update**: Accounts, containers, workspaces, tags, triggers, variables
-- **Delete**: Containers, workspaces, tags, triggers, variables
-- **Revert**: Tags, triggers, variables (restore to published state)
-- **Version**: Publish container versions
+- **Accounts**: List, get, update accounts
+- **Containers**: List, get, create, update, delete, snippet, lookup, combine, move tag ID
+- **Workspaces**: List, get, create, update, delete, status, sync, resolve conflicts, bulk update, quick preview
+- **Tags**: List, get, create, update, delete, revert
+- **Triggers**: List, get, create, update, delete, revert
+- **Variables**: List, get, create, update, delete, revert
+- **Built-in Variables**: List, create, delete, revert
+- **Folders**: List, get, create, update, delete, revert, move entities, get entities
+- **Container Versions**: List, get, update, delete, undelete, set latest, get live, publish
+- **Version Headers**: List, get latest
+- **Environments**: List, get, create, update, delete, reauthorize
+- **User Permissions**: List, get, create, update, delete
+- **Clients** (Server-side): List, get, create, update, delete, revert
+- **Google Tag Config**: List, get, create, update, delete, revert
+- **Templates**: List, get, create, update, delete, revert, import from gallery
+- **Transformations** (Server-side): List, get, create, update, delete, revert
+- **Zones** (Server-side): List, get
 - **Workflows**: GA4 setup, Facebook Pixel, form tracking, site-type workflows
 
 ## Usage
