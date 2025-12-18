@@ -1,6 +1,4 @@
-<div align="center">
-  <img src="banner.png" alt="Google Tag Manager MCP Server" width="830">
-</div>
+
 
 # Google Tag Manager MCP Server
 
@@ -9,6 +7,11 @@
 ![License](https://img.shields.io/badge/license-MIT-green?style=flat-square)
 ![GitHub stars](https://img.shields.io/github/stars/pouyanafisi/mcp-for-gtm?style=flat-square&logo=github)
 ![GitHub forks](https://img.shields.io/github/forks/pouyanafisi/mcp-for-gtm?style=flat-square&logo=github)
+
+<div align="center">
+  <img src="banner.png" alt="Google Tag Manager MCP Server" width="830">
+</div>
+
 
 MCP server for Google Tag Manager API v2. Provides programmatic access to GTM accounts, containers, workspaces, tags, triggers, variables, and version management.
 
