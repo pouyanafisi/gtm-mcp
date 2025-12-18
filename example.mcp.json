@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "gtm": {
+      "command": "node",
+      "args": ["/absolute/path/to/gtm-mcp/dist/index.js"],
+      "env": {
+        "GTM_CREDENTIALS_FILE": "/absolute/path/to/gtm-mcp/credentials.json",
+        "GTM_TOKEN_FILE": "/absolute/path/to/gtm-mcp/token.json"
+      }
+    }
+  }
+}
+

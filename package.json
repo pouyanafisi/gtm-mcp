@@ -1,0 +1,53 @@
+{
+  "name": "gtm-mcp-server",
+  "version": "1.0.0",
+  "description": "MCP server for Google Tag Manager",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "gtm-mcp-server": "./dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "tsx watch src/index.ts",
+    "type-check": "tsc --noEmit",
+    "auth": "tsx src/auth.ts",
+    "test": "vitest",
+    "test:run": "vitest run",
+    "test:ui": "vitest --ui",
+    "test:coverage": "vitest run --coverage"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "google-tag-manager",
+    "gtm",
+    "analytics"
+  ],
+  "author": "Pouya Nafisi",
+  "homepage": "https://github.com/pouyanafisi/mcp-for-gtm",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pouyanafisi/mcp-for-gtm.git"
+  },
+  "bugs": {
+    "url": "https://github.com/pouyanafisi/mcp-for-gtm/issues"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "googleapis": "^144.0.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.0",
+    "@vitest/ui": "^4.0.16",
+    "tsx": "^4.16.0",
+    "typescript": "^5.5.0",
+    "vitest": "^4.0.16"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
