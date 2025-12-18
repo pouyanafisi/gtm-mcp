@@ -27,18 +27,145 @@ Account
 
 ## Available Operations
 
-29 operations available. See [OPERATIONS.md](./OPERATIONS.md) for complete reference.
+99 operations available (95 API operations + 4 workflow helpers). See [OPERATIONS.md](./OPERATIONS.md) for complete reference.
 
-### Core Operations
-- Create/read/update/delete: Tags, triggers, variables
-- List/get: Accounts, containers, workspaces
-- Revert: Tags, triggers, variables
-- Publish: Container versions
+### Accounts (3)
+- `list_gtm_accounts` - List all GTM accounts
+- `get_gtm_account` - Get account details
+- `update_gtm_account` - Update account settings
 
-### Workflows
+### Containers (7)
+- `list_gtm_containers` - List containers in account
+- `get_gtm_container` - Get container details
+- `create_gtm_container` - Create new container
+- `update_gtm_container` - Update container
+- `delete_gtm_container` - Delete container
+- `get_gtm_container_snippet` - Get container snippet
+- `lookup_gtm_container` - Lookup by public ID
+
+### Workspaces (11)
+- `list_gtm_workspaces` - List workspaces
+- `get_gtm_workspace` - Get workspace details
+- `create_gtm_workspace` - Create workspace
+- `update_gtm_workspace` - Update workspace
+- `delete_gtm_workspace` - Delete workspace
+- `get_gtm_workspace_status` - Get workspace status
+- `sync_gtm_workspace` - Sync workspace
+- `resolve_gtm_conflict` - Resolve merge conflicts
+- `bulk_update_gtm_workspace` - Bulk update entities
+- `create_gtm_version` - Create version from workspace
+- `quick_preview_gtm_workspace` - Get preview URL
+
+### Tags (6)
+- `list_gtm_tags` - List tags
+- `get_gtm_tag` - Get tag details
+- `create_gtm_tag` - Create tag
+- `update_gtm_tag` - Update tag
+- `delete_gtm_tag` - Delete tag
+- `revert_gtm_tag` - Revert tag changes
+
+### Triggers (6)
+- `list_gtm_triggers` - List triggers
+- `get_gtm_trigger` - Get trigger details
+- `create_gtm_trigger` - Create trigger
+- `update_gtm_trigger` - Update trigger
+- `delete_gtm_trigger` - Delete trigger
+- `revert_gtm_trigger` - Revert trigger changes
+
+### Variables (6)
+- `list_gtm_variables` - List variables
+- `get_gtm_variable` - Get variable details
+- `create_gtm_variable` - Create variable
+- `update_gtm_variable` - Update variable
+- `delete_gtm_variable` - Delete variable
+- `revert_gtm_variable` - Revert variable changes
+
+### Built-In Variables (4)
+- `list_gtm_built_in_variables` - List built-in variables
+- `create_gtm_built_in_variable` - Enable built-in variable
+- `delete_gtm_built_in_variable` - Disable built-in variable
+- `revert_gtm_built_in_variables` - Revert all built-in variables
+
+### Folders (8)
+- `list_gtm_folders` - List folders
+- `get_gtm_folder` - Get folder details
+- `create_gtm_folder` - Create folder
+- `update_gtm_folder` - Update folder
+- `delete_gtm_folder` - Delete folder
+- `revert_gtm_folder` - Revert folder changes
+- `move_entities_to_gtm_folder` - Move entities to folder
+- `get_gtm_folder_entities` - Get folder contents
+
+### Container Versions (8)
+- `publish_gtm_version` - Publish version
+- `list_gtm_versions` - List versions
+- `get_gtm_version` - Get version details
+- `update_gtm_version` - Update version notes
+- `delete_gtm_version` - Delete version
+- `undelete_gtm_version` - Restore deleted version
+- `set_latest_gtm_version` - Set latest version
+- `get_live_gtm_version` - Get live version
+
+### Container Version Headers (2)
+- `list_gtm_version_headers` - List version headers
+- `get_latest_gtm_version_header` - Get latest header
+
+### Environments (6)
+- `list_gtm_environments` - List environments
+- `get_gtm_environment` - Get environment details
+- `create_gtm_environment` - Create environment
+- `update_gtm_environment` - Update environment
+- `delete_gtm_environment` - Delete environment
+- `reauthorize_gtm_environment` - Reauthorize environment
+
+### User Permissions (5)
+- `list_gtm_user_permissions` - List user permissions
+- `get_gtm_user_permission` - Get permission details
+- `create_gtm_user_permission` - Create permission
+- `update_gtm_user_permission` - Update permission
+- `delete_gtm_user_permission` - Delete permission
+
+### Clients (6) - Server-side Tagging
+- `list_gtm_clients` - List clients
+- `get_gtm_client` - Get client details
+- `create_gtm_client` - Create client
+- `update_gtm_client` - Update client
+- `delete_gtm_client` - Delete client
+- `revert_gtm_client` - Revert client changes
+
+### Google Tag Config (6)
+- `list_gtm_gtag_configs` - List gtag configs
+- `get_gtm_gtag_config` - Get config details
+- `create_gtm_gtag_config` - Create config
+- `update_gtm_gtag_config` - Update config
+- `delete_gtm_gtag_config` - Delete config
+- `revert_gtm_gtag_config` - Revert config changes
+
+### Templates (7)
+- `list_gtm_templates` - List templates
+- `get_gtm_template` - Get template details
+- `create_gtm_template` - Create template
+- `update_gtm_template` - Update template
+- `delete_gtm_template` - Delete template
+- `revert_gtm_template` - Revert template changes
+- `import_gtm_template_from_gallery` - Import from gallery
+
+### Transformations (6) - Server-side Tagging
+- `list_gtm_transformations` - List transformations
+- `get_gtm_transformation` - Get transformation details
+- `create_gtm_transformation` - Create transformation
+- `update_gtm_transformation` - Update transformation
+- `delete_gtm_transformation` - Delete transformation
+- `revert_gtm_transformation` - Revert transformation changes
+
+### Zones (2) - Server-side Tagging
+- `list_gtm_zones` - List zones
+- `get_gtm_zone` - Get zone details
+
+### Workflow Helpers (4)
 - `create_ga4_setup` - Complete GA4 setup
-- `create_facebook_pixel_setup` - Facebook Pixel
-- `create_form_tracking` - Form tracking
+- `create_facebook_pixel_setup` - Facebook Pixel setup
+- `create_form_tracking` - Form tracking setup
 - `generate_gtm_workflow` - Site-type workflows
 
 ## Usage Guidelines
