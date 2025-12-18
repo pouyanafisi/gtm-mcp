@@ -1,0 +1,54 @@
+# Source files
+src/
+test/
+*.test.ts
+*.spec.ts
+
+# Development files
+tsconfig.json
+vitest.config.ts
+*.tsbuildinfo
+
+# Documentation (keep README.md)
+docs/
+CLAUDE.md
+GEMINI.md
+CONTRIBUTING.md
+MCP_SETUP.md
+OPERATIONS.md
+API_COVERAGE.md
+example.mcp.json
+banner.png
+
+# Build artifacts (dist/ is included via files field)
+coverage/
+.nyc_output/
+
+# Credentials and environment
+credentials.json
+token.json
+.env
+.env.*
+
+# Git
+.git/
+.gitignore
+.gitattributes
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+

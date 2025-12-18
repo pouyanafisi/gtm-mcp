@@ -20,7 +20,22 @@ MCP server for Google Tag Manager API v2. Provides programmatic access to GTM ac
 
 ## Installation
 
+### Install from npm (Recommended)
+
 ```bash
+npm install -g gtm-mcp
+```
+
+Or install locally:
+
+```bash
+npm install gtm-mcp
+```
+
+### Install from source
+
+```bash
+git clone https://github.com/pouyanafisi/gtm-mcp.git
 cd gtm-mcp
 npm install
 npm run build
@@ -35,7 +50,42 @@ npm run build
 
 ## Configuration
 
-Add to your MCP client configuration (`.cursor/mcp.json` or Claude Desktop settings):
+### Using npm package
+
+If installed globally, use the binary directly:
+
+```json
+{
+  "mcpServers": {
+    "gtm": {
+      "command": "gtm-mcp",
+      "env": {
+        "GTM_CREDENTIALS_FILE": "/absolute/path/to/credentials.json",
+        "GTM_TOKEN_FILE": "/absolute/path/to/token.json"
+      }
+    }
+  }
+}
+```
+
+If installed locally, use `npx`:
+
+```json
+{
+  "mcpServers": {
+    "gtm": {
+      "command": "npx",
+      "args": ["gtm-mcp"],
+      "env": {
+        "GTM_CREDENTIALS_FILE": "/absolute/path/to/credentials.json",
+        "GTM_TOKEN_FILE": "/absolute/path/to/token.json"
+      }
+    }
+  }
+}
+```
+
+### Using source installation
 
 ```json
 {
@@ -56,7 +106,27 @@ See `MCP_SETUP.md` for platform-specific instructions.
 
 ## Authentication
 
-Run `npm run auth` to authenticate. Token saved to `token.json` and auto-refreshed.
+### Using npm package
+
+If installed globally:
+
+```bash
+gtm-mcp-auth
+```
+
+Or with npx:
+
+```bash
+npx gtm-mcp-auth
+```
+
+### Using source installation
+
+```bash
+npm run auth
+```
+
+Token saved to `token.json` and auto-refreshed.
 
 ## Operations
 

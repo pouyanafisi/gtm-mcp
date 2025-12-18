@@ -1,11 +1,12 @@
 {
-  "name": "gtm-mcp-server",
+  "name": "gtm-mcp",
   "version": "1.0.0",
   "description": "MCP server for Google Tag Manager",
   "type": "module",
   "main": "dist/index.js",
   "bin": {
-    "gtm-mcp-server": "./dist/index.js"
+    "gtm-mcp": "dist/index.js",
+    "gtm-mcp-auth": "dist/auth.js"
   },
   "scripts": {
     "build": "tsc",
@@ -16,8 +17,14 @@
     "test": "vitest",
     "test:run": "vitest run",
     "test:ui": "vitest --ui",
-    "test:coverage": "vitest run --coverage"
+    "test:coverage": "vitest run --coverage",
+    "prepublishOnly": "npm run build"
   },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
   "keywords": [
     "mcp",
     "model-context-protocol",
@@ -26,13 +33,13 @@
     "analytics"
   ],
   "author": "Pouya Nafisi",
-  "homepage": "https://github.com/pouyanafisi/mcp-for-gtm",
+  "homepage": "https://github.com/pouyanafisi/gtm-mcp",
   "repository": {
     "type": "git",
-    "url": "https://github.com/pouyanafisi/mcp-for-gtm.git"
+    "url": "git+https://github.com/pouyanafisi/gtm-mcp.git"
   },
   "bugs": {
-    "url": "https://github.com/pouyanafisi/mcp-for-gtm/issues"
+    "url": "https://github.com/pouyanafisi/gtm-mcp/issues"
   },
   "license": "MIT",
   "dependencies": {
