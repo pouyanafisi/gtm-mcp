@@ -189,12 +189,29 @@ export class GTMClient {
     try {
       const workspaceId = await this.getWorkspaceId(accountId, containerId);
 
+      // Determine parameter key based on variable type
+      let parameter: tagmanager_v2.Schema$Parameter[] | undefined;
+
+      if (value) {
+        if (variableType === 'v') {
+          // Data Layer Variable: key is 'name'
+          parameter = [{ key: 'name', value, type: 'template' }];
+        } else if (variableType === 'c') {
+          // Constant: key is 'value'
+          parameter = [{ key: 'value', value, type: 'template' }];
+        } else if (variableType === 'jsm') {
+          // Custom JavaScript: key is 'javascript'
+          parameter = [{ key: 'javascript', value, type: 'template' }];
+        } else {
+          // Other types: default to 'value'
+          parameter = [{ key: 'value', value, type: 'template' }];
+        }
+      }
+
       const variableBody: tagmanager_v2.Schema$Variable = {
         name: variableName,
         type: variableType,
-        parameter: value
-          ? [{ key: 'value', value, type: 'template' }]
-          : undefined,
+        parameter,
       };
 
       const response =
